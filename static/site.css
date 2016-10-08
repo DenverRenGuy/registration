@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+form{
+    margin-top: 1em;
+    display: inline-block;
+}
+
+form input{
+    display: block;
+}
+
+.wrapper{
+    width: 80%;
+    margin: 0 auto;
+
+}
+
+.register-form{
+    width: 40%;
+}
+
+.login-form{
+    width: 40%
+}
+
+.message{
+
+}
+
+.error{
+    background-color: #590F0F;
+    color: #FB7D7D;
+    width: 40%;
+    height: 3em;
+}
+
+.hidden{
+    visibility: hidden;
+}

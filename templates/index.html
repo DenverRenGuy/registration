@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Registration Page | Coding Dojo</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='site.css') }}" type="text/css">
+    </head>
+    <body>
+        <div class="wrapper">
+            <h1>Registration Page</h1>
+            <div class="register-form">
+                <form class="" action="/register" method="post">
+                    <fieldset>
+                        <legend>Register A User</legend>
+                        First Name: <input type="text" name="first_name" placeholder="First Name" value="">
+                        Last Name: <input type="text" name="last_name" placeholder="Last Name" value="">
+                        Email: <input type="email" name="email" placeholder="example@example.com" value="">
+                        Password: <input type="password" name="password" value="">
+                        Confirm Password: <input type="password" name="password_confirm" value="">
+                        <input type="submit" name="submit" value="Register User">
+                    </fieldset>
+                </form>
+
+            </div>
+
+            <div class="message">
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                    {% if messages %}
+                        {% for category, message in messages %}
+                            <div class=" {{category}} "> {{message}}
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+            </div>
+
+            <div class="login-form">
+                <form class="" action="/login" method="post">
+                    <fieldset>
+                        <legend>Login</legend>
+                        Email: <input type="email" name="email" placeholder="example@example.com" value="">
+                        Password: <input type="password" name="password" value="">
+                        <input type="submit" name="submit" value="Login">
+                    </fieldset>
+                </form>
+            </div>
+
+        </div>
+    </body>
+</html>
